@@ -1,0 +1,139 @@
+@font-face {
+  font-family: font1;
+  src: url(./font1.woff2);
+}
+@font-face {
+  font-family: font2;
+  src: url(./font2.woff2);
+}
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flexcolumn($gap: 0) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+header {
+  width: 100%;
+  .eventbar {
+    background: linear-gradient(124.64deg, #027dfd, #833ef2);
+    font-family: font1;
+    font-weight: 600;
+    color: white;
+    padding: 1rem;
+    font-size: 0.85rem;
+    @include flexCenter;
+  }
+  nav {
+    background-color: white;
+    padding: 1.2rem 2rem;
+    @include flexCenter;
+    justify-content: space-between;
+    .logo {
+      img {
+        width: 80%;
+      }
+    }
+    .icon {
+      i {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+main {
+  width: 100%;
+  .view1 {
+    @include flexcolumn(5rem);
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    background: linear-gradient(35deg, #fcdde8, #f3fcff 60%);
+    .top {
+        padding: 2rem 0;
+      width: 100%;
+      @include flexcolumn(4.5rem);
+      justify-content: space-between;
+      align-items: center;
+      img {
+        width: 100%;
+      }
+      h1 {
+        width: 80%;
+        font-family: font1;
+        font-weight: 700;
+        font-size: 2.8rem;
+        color: #0b0b0b;
+        text-align: center;
+        line-height: 2.8rem;
+      }
+    }
+    .bottom {
+        width: 100%;
+      p {
+        font-family: font2;
+        font-size: 2.1rem;
+        width: 98%;
+        text-align: center;
+        font-weight: 400;
+      }
+    }
+  }
+}
+@media (min-width: 1000px) {
+  header {
+    nav {
+      padding: 1.5rem 3.5rem;
+      .logo {
+        img {
+          width: 80%;
+        }
+      }
+      .icon {
+        i {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+  section.view1{
+    padding: 0rem 2rem;
+
+    .top{
+     flex-direction: row-reverse;
+     justify-content: space-around;
+     padding: 3rem 3.5rem;
+     img{
+      width: 50%;
+     }
+     h1{
+        width: 50%;
+        font-size: 4.3rem;
+        line-height: 4.6rem;
+        text-align: left;
+        font-weight: 900;
+     }
+    }
+    .bottom{
+        @include flexCenter;
+      p{
+        font-size: 2.1rem;
+        width: 73%;
+        text-align: center;
+      }
+    }
+  }
+}

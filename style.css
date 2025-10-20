@@ -1,0 +1,132 @@
+@font-face {
+  font-family: font1;
+  src: url(./font1.woff2);
+}
+@font-face {
+  font-family: font2;
+  src: url(./font2.woff2);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  width: 100%;
+}
+header .eventbar {
+  background: linear-gradient(124.64deg, #027dfd, #833ef2);
+  font-family: font1;
+  font-weight: 600;
+  color: white;
+  padding: 1rem;
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav {
+  background-color: white;
+  padding: 1.2rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav .logo img {
+  width: 80%;
+}
+header nav .icon i {
+  font-size: 1.3rem;
+}
+
+main {
+  width: 100%;
+}
+main .view1 {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  background: linear-gradient(35deg, #fcdde8, #f3fcff 60%);
+}
+main .view1 .top {
+  padding: 2rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+main .view1 .top img {
+  width: 100%;
+}
+main .view1 .top h1 {
+  width: 80%;
+  font-family: font1;
+  font-weight: 700;
+  font-size: 2.8rem;
+  color: #0b0b0b;
+  text-align: center;
+  line-height: 2.8rem;
+}
+main .view1 .bottom {
+  width: 100%;
+}
+main .view1 .bottom p {
+  font-family: font2;
+  font-size: 2.1rem;
+  width: 98%;
+  text-align: center;
+  font-weight: 400;
+}
+
+@media (min-width: 1000px) {
+  header nav {
+    padding: 1.5rem 3.5rem;
+  }
+  header nav .logo img {
+    width: 80%;
+  }
+  header nav .icon i {
+    font-size: 1.5rem;
+  }
+  section.view1 {
+    padding: 0rem 2rem;
+  }
+  section.view1 .top {
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    padding: 3rem 3.5rem;
+  }
+  section.view1 .top img {
+    width: 50%;
+  }
+  section.view1 .top h1 {
+    width: 50%;
+    font-size: 4.3rem;
+    line-height: 4.6rem;
+    text-align: left;
+    font-weight: 900;
+  }
+  section.view1 .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  section.view1 .bottom p {
+    font-size: 2.1rem;
+    width: 73%;
+    text-align: center;
+  }
+}/*# sourceMappingURL=style.css.map */
