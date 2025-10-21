@@ -206,7 +206,7 @@ main .view3 .bottom .buttons .btn1 {
   font-family: font1;
   font-size: 1.1rem;
   font-weight: 600;
-  border: 0.5px solid rgb(4, 104, 215);
+  border: 1px solid rgb(4, 104, 215);
   border-radius: 50px;
 }
 main .view3 .bottom .buttons .btn2 {
@@ -228,7 +228,8 @@ main .view4 {
   flex-direction: column;
   gap: 2rem;
 }
-main .view4 .top, main .view4 .bottom {
+main .view4 .top,
+main .view4 .bottom {
   width: 100%;
 }
 main .view4 img {
@@ -270,6 +271,58 @@ main .view4 .bottom button {
   font-size: 1.1rem;
   font-weight: 600;
   border: none;
+  border-radius: 50px;
+}
+main .view5 {
+  width: 100%;
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+main .view5 .top,
+main .view5 .bottom {
+  width: 100%;
+}
+main .view5 img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .view5 .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main .view5 .bottom h2 {
+  font-family: font1;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0b0b0b;
+}
+main .view5 .bottom h1 {
+  font-family: font1;
+  font-size: 3.3rem;
+  font-weight: 900;
+  color: #0b0b0b;
+}
+main .view5 .bottom p {
+  font-family: font1;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #3b3b3b;
+  width: 90%;
+}
+main .view5 .bottom button {
+  width: 40%;
+  padding: 0.6rem 0.2rem;
+  background-color: rgb(255, 255, 255);
+  color: rgb(4, 104, 215);
+  font-family: font1;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 1px solid rgb(4, 104, 215);
   border-radius: 50px;
 }
 
@@ -401,6 +454,40 @@ main .view4 .bottom button {
   }
   section.view4 .bottom button {
     width: 40%;
+    padding: 0.7rem 0.5rem;
+    font-size: 0.9rem;
+  }
+  section.view5 {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 4rem;
+    padding: 3rem 4rem;
+  }
+  section.view5 .top,
+  section.view5 .bottom {
+    width: 50%;
+    padding: 1rem;
+  }
+  section.view5 img {
+    width: 100%;
+  }
+  section.view5 .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  section.view5 .bottom h1 {
+    font-size: 4rem;
+    line-height: 3.5rem;
+  }
+  section.view5 .bottom p {
+    font-size: 1.3rem;
+    width: 90%;
+    line-height: 1.7rem;
+  }
+  section.view5 .bottom button {
+    width: 30%;
     padding: 0.7rem 0.5rem;
     font-size: 0.9rem;
   }
