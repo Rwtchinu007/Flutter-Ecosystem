@@ -20,6 +20,10 @@ body {
 
 header {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  align-items: center;
 }
 header .eventbar {
   background: linear-gradient(124.64deg, #027dfd, #833ef2);
@@ -31,8 +35,10 @@ header .eventbar {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 header nav {
+  width: 100%;
   background-color: white;
   padding: 1.2rem 2rem;
   display: flex;
@@ -47,14 +53,31 @@ header nav .icon i {
   font-size: 1.3rem;
 }
 
+header {
+  max-width: 2000px;
+  margin: auto;
+}
+
+html {
+  font-size: clamp(14px, 1.25vw, 18px);
+}
+
+main section {
+  max-width: 2000px;
+}
+
 main {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  align-items: center;
 }
 main .view1 {
   display: flex;
   flex-direction: column;
   gap: 5rem;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   padding: 1.5rem;
   background: linear-gradient(35deg, #fcdde8, #f3fcff 60%);
@@ -70,12 +93,16 @@ main .view1 .top {
 }
 main .view1 .top img {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 main .view1 .top h1 {
   width: 80%;
   font-family: font1;
   font-weight: 700;
-  font-size: 2.8rem;
+  font-size: 3.2rem;
   color: #0b0b0b;
   text-align: center;
   line-height: 2.8rem;
@@ -84,11 +111,48 @@ main .view1 .bottom {
   width: 100%;
 }
 main .view1 .bottom p {
-  font-family: font2;
-  font-size: 2.1rem;
-  width: 98%;
+  font-family: font1;
+  font-size: 2.3rem;
+  width: 97%;
   text-align: center;
   font-weight: 400;
+  margin-bottom: 2.5rem;
+}
+main .view2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  padding: 5rem 1.5rem;
+  margin-bottom: 2rem;
+}
+main .view2 .card {
+  border-top: 4px solid #e8eaed;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 2rem 0.5rem;
+  width: 100%;
+}
+main .view2 .card img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+main .view2 .card h2 {
+  font-family: font1;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #0b0b0b;
+}
+main .view2 .card p {
+  font-family: font1;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #3b3b3b;
+  width: 95%;
 }
 
 @media (min-width: 1000px) {
@@ -110,10 +174,10 @@ main .view1 .bottom p {
     padding: 3rem 3.5rem;
   }
   section.view1 .top img {
-    width: 50%;
+    width: 55%;
   }
   section.view1 .top h1 {
-    width: 50%;
+    width: 45%;
     font-size: 4.3rem;
     line-height: 4.6rem;
     text-align: left;
@@ -125,8 +189,29 @@ main .view1 .bottom p {
     align-items: center;
   }
   section.view1 .bottom p {
-    font-size: 2.1rem;
+    font-size: 2.13rem;
     width: 73%;
     text-align: center;
+    font-weight: 350;
+    margin-bottom: 3rem;
+  }
+  section.view2 {
+    flex-direction: row;
+    padding: 5rem 4rem;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+  section.view2 .card {
+    gap: 2rem;
+  }
+  section.view2 .card img {
+    width: 100%;
+  }
+  section.view2 .card h2 {
+    font-size: 1.8rem;
+  }
+  section.view2 .card p {
+    font-size: 1.25rem;
+    width: 95%;
   }
 }/*# sourceMappingURL=style.css.map */

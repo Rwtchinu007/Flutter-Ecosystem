@@ -20,6 +20,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  // outline: 1px solid red;
 }
 html,
 body {
@@ -28,6 +29,8 @@ body {
 }
 header {
   width: 100%;
+  @include flexcolumn(0rem);
+  align-items: center;
   .eventbar {
     background: linear-gradient(124.64deg, #027dfd, #833ef2);
     font-family: font1;
@@ -36,8 +39,10 @@ header {
     padding: 1rem;
     font-size: 0.85rem;
     @include flexCenter;
+    width: 100%;
   }
   nav {
+    width: 100%;
     background-color: white;
     padding: 1.2rem 2rem;
     @include flexCenter;
@@ -54,41 +59,86 @@ header {
     }
   }
 }
+header {
+  max-width: 2000px;
+  margin: auto;
+}
+html {
+  font-size: clamp(14px, 1.25vw, 18px);
+}
+main section {
+  max-width: 2000px;
+}
 main {
   width: 100%;
+  @include flexcolumn(0rem);
+  align-items: center;
   .view1 {
     @include flexcolumn(5rem);
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     padding: 1.5rem;
     background: linear-gradient(35deg, #fcdde8, #f3fcff 60%);
     .top {
-        padding: 2rem 0;
+      padding: 2rem 0;
       width: 100%;
       @include flexcolumn(4.5rem);
       justify-content: space-between;
       align-items: center;
       img {
         width: 100%;
+        object-fit: cover;
+        object-position: center;
       }
       h1 {
         width: 80%;
         font-family: font1;
         font-weight: 700;
-        font-size: 2.8rem;
+        font-size: 3.2rem;
         color: #0b0b0b;
         text-align: center;
         line-height: 2.8rem;
       }
     }
     .bottom {
-        width: 100%;
+      width: 100%;
       p {
-        font-family: font2;
-        font-size: 2.1rem;
-        width: 98%;
+        font-family: font1;
+        font-size: 2.3rem;
+        width: 97%;
         text-align: center;
         font-weight: 400;
+        margin-bottom: 2.5rem;
+      }
+    }
+  }
+  .view2 {
+    width: 100%;
+    @include flexcolumn(0rem);
+    padding: 5rem 1.5rem;
+    margin-bottom: 2rem;
+    .card {
+      border-top: 4px solid #e8eaed;
+      @include flexcolumn(2.5rem);
+      padding: 2rem 0.5rem;
+      width: 100%;
+      img{
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+      h2{
+        font-family: font1;
+        font-size: 1.9rem;
+        font-weight: 700;
+        color: #0b0b0b;
+      }
+      p{
+        font-family: font1;
+        font-size:1.3rem;
+        font-weight: 400;
+        color: #3b3b3b;
+        width: 95%;
       }
     }
   }
@@ -109,30 +159,52 @@ main {
       }
     }
   }
-  section.view1{
+  section.view1 {
     padding: 0rem 2rem;
 
-    .top{
-     flex-direction: row-reverse;
-     justify-content: space-around;
-     padding: 3rem 3.5rem;
-     img{
-      width: 50%;
-     }
-     h1{
-        width: 50%;
+    .top {
+      flex-direction: row-reverse;
+      justify-content: space-around;
+      padding: 3rem 3.5rem;
+      img {
+        width: 55%;
+      }
+      h1 {
+        width: 45%;
         font-size: 4.3rem;
         line-height: 4.6rem;
         text-align: left;
         font-weight: 900;
-     }
+      }
     }
-    .bottom{
-        @include flexCenter;
-      p{
-        font-size: 2.1rem;
+    .bottom {
+      @include flexCenter;
+      p {
+        font-size: 2.13rem;
         width: 73%;
         text-align: center;
+        font-weight: 350;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+  section.view2{
+    flex-direction: row;
+    padding: 5rem 4rem;
+    justify-content: space-between;
+    gap: 3rem;
+
+    .card {
+      gap: 2rem;
+      img{
+        width: 100%;
+      }
+      h2{
+        font-size: 1.8rem;
+      }
+      p{
+        font-size:1.25rem;
+        width: 95%;
       }
     }
   }
