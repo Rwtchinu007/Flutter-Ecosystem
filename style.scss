@@ -311,7 +311,7 @@ main {
     }
     .bottom {
       @include flexcolumn(1.8rem);
-      h2{
+      h2 {
         font-family: font1;
         font-size: 1.3rem;
         font-weight: 700;
@@ -331,10 +331,79 @@ main {
         color: #3b3b3b;
         width: 90%;
       }
-      button{
+      button {
         width: 55%;
         padding: 0.7rem 0.1rem;
         background-color: rgb(4, 104, 215);
+        color: white;
+        font-family: font1;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 50px;
+      }
+    }
+  }
+  .view7 {
+    padding: 5rem 1.5rem;
+    width: 100%;
+    .container {
+      background-color: #042449;
+      border-radius: 3rem;
+      display: flex;
+      justify-content: space-between;
+      overflow: hidden;
+      position: relative;
+      padding: 4rem 0rem;
+    }
+    .text {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      padding: 3rem 2.5rem;
+      @include flexcolumn(2rem);
+      h1 {
+        font-family: font1;
+        font-size: 3.5rem;
+        color: white;
+        width: 50%;
+      }
+      h3 {
+        font-family: font2;
+        font-size: 1.25rem;
+        width: 80%;
+        color: white;
+        font-weight: 300;
+      }
+    }
+    .media {
+      width: 120%;
+      top: 0%;
+      right: 0%;
+      z-index: 0;
+      position: absolute;
+
+      img {
+        width: 180%;
+      }
+    }
+    .buttons {
+      @include flexcolumn(0.8rem);
+      .btn1 {
+        width: 50%;
+        padding: 0.6rem 1rem;
+        background-color: white;
+        color: rgb(4, 104, 215);
+        font-family: font1;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 50px;
+      }
+      .btn2 {
+        width: 60%;
+        padding: 0.6rem 1rem;
+        background-color: transparent;
         color: white;
         font-family: font1;
         font-size: 1.1rem;
@@ -513,7 +582,7 @@ main {
       }
     }
   }
-  section.view6{
+  section.view6 {
     flex-direction: row;
     justify-content: space-between;
     gap: 4rem;
@@ -536,17 +605,58 @@ main {
       h1 {
         font-size: 3.7rem;
         line-height: 3.5rem;
-        width: 100%; 
+        width: 100%;
       }
       p {
         font-size: 1.2rem;
         width: 90%;
         line-height: 1.7rem;
       }
-      button{
+      button {
         width: 38%;
         padding: 0.7rem 0.5rem;
         font-size: 0.9rem;
+      }
+    }
+  }
+  section.view7{
+    padding: 4rem 4rem;
+    .container {
+      padding: 1rem 3rem;
+    }
+    .text {
+      gap: 0.5rem;
+      padding: 3rem 2rem;
+      h1 {
+        font-size: 4rem;
+        width: 60%;
+      }
+      h3 {
+        font-size: 1.25rem;
+        width: 70%;
+      }
+    }
+    .buttons {
+      margin-top: 2.34rem;
+      flex-direction: row;
+      gap: 1rem;
+      .btn1,
+      .btn2 {
+        font-size: 0.95rem;
+        padding: 0.5rem 0.6rem;
+        width: 10%;
+        font-weight: 600;
+      }
+      .btn2{
+        width: 17%;
+        
+      }
+    }
+    .media {
+      width: 100%;
+      right: -60%;
+      img {
+        width: 40%;
       }
     }
   }
